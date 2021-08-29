@@ -13,7 +13,7 @@ public class ThirdPerson : MonoBehaviour
 
     public float speed = 2f;
 
-    public float turnSmoothTime = 0.1f;
+    public float turnSmoothTime = 01f;
     float turnSmoothVelocity;
 
 

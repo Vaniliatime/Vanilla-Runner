@@ -15,7 +15,7 @@ public class SC_FPSController : MonoBehaviour
     public float lookXLimit = 45.0f;
     private AudioSource audioSource;
     public Animator animator;
-
+    public CharacterController controller;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
