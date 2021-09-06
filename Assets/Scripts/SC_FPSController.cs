@@ -15,7 +15,7 @@ public class SC_FPSController : MonoBehaviour
     public float lookXLimit = 45.0f;
     private AudioSource audioSource;
     public Animator animator;
-    public CharacterController controller;
+    private CharacterController controller;
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -35,7 +35,7 @@ public class SC_FPSController : MonoBehaviour
 
 
         // Lock cursor
-        Cursor.lockState = CursorLockMode.Locked;
+       
         Cursor.visible = false;
     }
 
@@ -46,12 +46,12 @@ public class SC_FPSController : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right);
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 1; 
         float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
 
@@ -63,25 +63,14 @@ public class SC_FPSController : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           
-           animator.SetTrigger("Jump");
-           
-        }
+      
          
        
 
 
 
         
-          if (Input.GetKeyDown(KeyCode.W))
-            {
-
-            animator.SetTrigger("Run");
-
-
-        }
+        
        
 
        
@@ -99,16 +88,18 @@ public class SC_FPSController : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
 
-        // Player and Camera rotation
-        if (canMove)
-        {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        }
+      
 
 
 
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.transform.tag =="Obstacle")
+        {
+            PlayerManager.gameOver = true;
+        }
+    }
+
 }
