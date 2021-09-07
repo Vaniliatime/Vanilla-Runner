@@ -23,7 +23,13 @@ public class SC_FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    
+    public GameObject waitScreen;
+        public GameObject escMenu;
+
+
+    public static bool GameIsPaused = true;
+
+
     Animator anim;
     void Start()
     {
@@ -37,6 +43,9 @@ public class SC_FPSController : MonoBehaviour
         // Lock cursor
        
         Cursor.visible = false;
+
+        Pause();
+
     }
 
     void Update()
@@ -88,11 +97,61 @@ public class SC_FPSController : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
 
-      
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
 
+            }
+            else
+            {
+                Pause();
+            }
+           
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu();
+        }
+
+       
 
     }
+
+
+
+    void Resume()
+    {
+        waitScreen.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    void Pause()
+    {
+        waitScreen.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    void PauseMenu()
+    {
+        escMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    void ResumeMenu()
+    {
+        escMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
