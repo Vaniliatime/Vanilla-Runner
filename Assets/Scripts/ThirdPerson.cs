@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ThirdPerson : MonoBehaviour
 {
-    
 
-
+    private CharacterController controller;
+    private Vector3 moveVector;
     public float speed = 20f;
+    public float hSpeed = 25f;
 
-
+ 
 
 
 
@@ -21,18 +22,19 @@ public class ThirdPerson : MonoBehaviour
 
     void Start()
     {
-
+        controller = GetComponent<CharacterController>();
     }
 
 
     void Update()
     {
+        moveVector = Vector3.zero;
+        moveVector.x = Input.GetAxisRaw("Horizontal") * hSpeed;
+
+        moveVector.z = speed;
 
 
-        float hMovement = Input.GetAxis("Horizontal") * speed;
-        float vMovement = Input.GetAxis("Vertical") * speed;
-
-        transform.Translate(new Vector3(hMovement, 0, vMovement) * Time.deltaTime);
+        controller.Move(moveVector * Time.deltaTime);
 
 
 

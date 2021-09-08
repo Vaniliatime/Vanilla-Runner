@@ -6,19 +6,11 @@ using UnityEngine;
 
 public class SC_FPSController : MonoBehaviour
 {
-    public float walkingSpeed = 7.5f;
-    public float runningSpeed = 11.5f;
-    public float jumpSpeed = 5.0f;
-    public float gravity = 20.0f;
-    public Camera playerCamera;
-    public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
+  
     private AudioSource audioSource;
     public Animator animator;
-    private CharacterController controller;
-    CharacterController characterController;
-    Vector3 moveDirection = Vector3.zero;
-    float rotationX = 0;
+
+ 
 
     [HideInInspector]
     public bool canMove = true;
@@ -28,6 +20,11 @@ public class SC_FPSController : MonoBehaviour
 
 
     public static bool GameIsPaused = true;
+    private CharacterController controller;
+    private Vector3 moveVector;
+    public float speed = 20f;
+    public float hSpeed = 25f;
+
 
 
     Animator anim;
@@ -36,12 +33,13 @@ public class SC_FPSController : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
         anim = gameObject.GetComponent<Animator>();
 
-        characterController = GetComponent<CharacterController>();
+
+        controller = GetComponent<CharacterController>();
 
 
 
         // Lock cursor
-       
+
         Cursor.visible = false;
 
         Pause();
@@ -50,52 +48,17 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
-        // We are grounded, so recalculate move direction based on axes
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-        // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 1; 
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-        if (Input.GetKeyDown(KeyCode.Space) && canMove && characterController.isGrounded)
-        {
-            moveDirection.y = jumpSpeed;
-
-            
-
-        }
-        else
-        {
-            moveDirection.y = movementDirectionY;
-        }
-
-      
-         
-       
-
-
-
-        
-        
-       
-
-       
-         
-        
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
-        }
+     
 
         // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
+        moveVector = Vector3.zero;
+        moveVector.x = Input.GetAxisRaw("Horizontal") * hSpeed;
+
+        moveVector.z = speed;
+
+
+        controller.Move(moveVector * Time.deltaTime);
+
 
 
         if (Input.GetKeyDown(KeyCode.P))
