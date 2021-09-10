@@ -8,11 +8,18 @@ public class PlayerManager : MonoBehaviour
     public static bool gameOver;
     public GameObject gameOverPanel;
 
+    public Animator animator;
+
+    public PlayerController playercontrollscript;
 
     void Start()
     {
         gameOver = false;
         Time.timeScale = 1;
+
+        Animator animator = gameObject.GetComponent<Animator>();
+
+        
     }
 
     // Update is called once per frame
@@ -20,8 +27,15 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameOver)
         {
-            Time.timeScale = 0;
+          
             gameOverPanel.SetActive(true);
+            Cursor.visible = true;
+
+            animator.SetTrigger("deatht");
+
+            playercontrollscript.speed = 0f;
+            playercontrollscript.hSpeed = 0f;
+
         }
        
 

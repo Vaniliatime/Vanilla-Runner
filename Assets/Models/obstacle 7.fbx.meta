@@ -1,12 +1,15 @@
 fileFormatVersion: 2
-guid: fcd538b33080ac14ba0f2b218a6d791a
+guid: 9eabeb3abd026ac40ab77889cc0f1bef
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: -203655887218126122
-    second: mixamo.com
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Barrier_04
+    second: {fileID: 9013887464706325183, guid: 0ff98adf469a65945b3d1a90d6dfc4ed,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -5,15 +5,17 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
 
+    public ParticleSystem coinParticles;
+
     public float turnSpeed = 90f;
 
 
     private void OnTriggerEnter(Collider other)
     {
 
-     
 
-        if (other.gameObject.name !="Player")
+
+        if (other.gameObject.name != "Player")
         {
             return;
         }
@@ -24,13 +26,13 @@ public class Coin : MonoBehaviour
 
 
 
-
+        Instantiate(coinParticles, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
     }
 
 
-
+   
 
     void Start()
     {
@@ -42,4 +44,6 @@ public class Coin : MonoBehaviour
     {
         transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
     }
+
+
 }

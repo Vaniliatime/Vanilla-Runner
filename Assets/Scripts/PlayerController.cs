@@ -4,10 +4,10 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 
-public class SC_FPSController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
   
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public Animator animator;
 
  
@@ -20,10 +20,18 @@ public class SC_FPSController : MonoBehaviour
 
 
     public static bool GameIsPaused = true;
-    private CharacterController controller;
-    private Vector3 moveVector;
-    public float speed = 20f;
+    public CharacterController controller;
+    public Vector3 moveVector;
+    public float speed = 40f;
     public float hSpeed = 25f;
+    public float slower = 15f;
+
+
+    public float jumpSpeed;
+    public float gravity;
+
+
+
 
 
 
@@ -39,10 +47,13 @@ public class SC_FPSController : MonoBehaviour
 
 
         // Lock cursor
-
+  
         Cursor.visible = false;
 
         Pause();
+
+
+     
 
     }
 
@@ -57,7 +68,31 @@ public class SC_FPSController : MonoBehaviour
         moveVector.z = speed;
 
 
+
         controller.Move(moveVector * Time.deltaTime);
+
+
+        
+       
+
+
+
+
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            slowSpeed();
+       
+
+        }
+        else
+        {
+            sprint();
+        }
+
+
+
 
 
 
@@ -79,11 +114,17 @@ public class SC_FPSController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseMenu();
+            Cursor.visible = true;
+            
+
         }
 
        
 
+
+
     }
+
 
 
 
@@ -122,6 +163,22 @@ public class SC_FPSController : MonoBehaviour
         {
             PlayerManager.gameOver = true;
         }
+    }
+
+
+    void sprint ()
+    {
+        speed = 55f;
+        
+
+    }
+    void slowSpeed()
+
+    {
+        speed = 15f;
+      
+
+
     }
 
 }
