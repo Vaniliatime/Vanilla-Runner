@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [RequireComponent(typeof(CharacterController))]
 
 public class PlayerController : MonoBehaviour
@@ -27,10 +28,9 @@ public class PlayerController : MonoBehaviour
     public float slower = 15f;
 
 
-    public float jumpSpeed;
-    public float gravity;
 
 
+    
 
 
 
@@ -44,13 +44,14 @@ public class PlayerController : MonoBehaviour
 
         controller = GetComponent<CharacterController>();
 
-
+   
 
         // Lock cursor
   
         Cursor.visible = false;
 
         Pause();
+
 
 
      
@@ -72,8 +73,9 @@ public class PlayerController : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
 
 
-        
-       
+
+     
+
 
 
 
@@ -119,9 +121,9 @@ public class PlayerController : MonoBehaviour
 
         }
 
-       
 
 
+      
 
     }
 
@@ -140,6 +142,7 @@ public class PlayerController : MonoBehaviour
         waitScreen.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+ 
     }
 
     void PauseMenu()
@@ -181,4 +184,5 @@ public class PlayerController : MonoBehaviour
 
     }
 
+   
 }
