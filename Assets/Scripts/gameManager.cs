@@ -42,4 +42,6 @@ public class gameManager : MonoBehaviour
             PlayerPrefs.SetFloat("Highscore", score);
         }
     }
+
+
 }

@@ -589,6 +589,7 @@ GameObject:
   - component: {fileID: 2855982777196519595}
   - component: {fileID: 7695246081820962596}
   - component: {fileID: 5001394116327112664}
+  - component: {fileID: 775178236939593589}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 6
   m_TagString: Untagged
@@ -660,6 +661,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &775178236939593589
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722584607281881306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: 0.000000059604645, y: 0.19999999, z: 0.000000059604645}
 --- !u!1 &765085480076144484
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +932,7 @@ GameObject:
   - component: {fileID: 5196228851855915824}
   - component: {fileID: 3722619911444536875}
   - component: {fileID: 701053853298456556}
+  - component: {fileID: 8231677000650465595}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 1
   m_TagString: Untagged
@@ -989,6 +1004,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8231677000650465595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877461638616521810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: -0.00000011920929, y: 0.19999999, z: 0.000000059604645}
 --- !u!1 &950951908435984509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2422,7 @@ GameObject:
   - component: {fileID: 8197233489693600258}
   - component: {fileID: 1285634092049131691}
   - component: {fileID: 4912593161642672044}
+  - component: {fileID: 8906295936587984656}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 2
   m_TagString: Untagged
@@ -2465,6 +2494,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8906295936587984656
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314932203530468799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: -0.00000011920929, y: 0.19999999, z: 0}
 --- !u!1 &2350495093458810923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,6 +6426,7 @@ GameObject:
   - component: {fileID: 1398592820636849489}
   - component: {fileID: 6222755803875522351}
   - component: {fileID: 627255916370505501}
+  - component: {fileID: 2983473511349092026}
   m_Layer: 0
   m_Name: detail_roadBlockSmall
   m_TagString: Untagged
@@ -6455,6 +6498,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2983473511349092026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6139256377521154077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: -0.000000029802322, y: 0.19999999, z: 0}
 --- !u!1 &6338334152558660736
 GameObject:
   m_ObjectHideFlags: 0
@@ -6741,6 +6797,7 @@ GameObject:
   - component: {fileID: 2859422280827752000}
   - component: {fileID: 6903041996098374967}
   - component: {fileID: 4498514777114881958}
+  - component: {fileID: 7541473487483816441}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 3
   m_TagString: Untagged
@@ -6812,6 +6869,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7541473487483816441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591664776516919180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: 0, y: 0.19999999, z: 0}
 --- !u!1 &6830605390636728405
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,6 +7827,7 @@ GameObject:
   - component: {fileID: 3070862524173440380}
   - component: {fileID: 8734564785585872725}
   - component: {fileID: 4846543216508495868}
+  - component: {fileID: 62190129566585623}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 7
   m_TagString: Untagged
@@ -7828,6 +7899,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &62190129566585623
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8039482497708056792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: 0.000000059604645, y: 0.19999999, z: 0}
 --- !u!1 &8168058298188604976
 GameObject:
   m_ObjectHideFlags: 0
@@ -7984,6 +8068,7 @@ GameObject:
   - component: {fileID: 4693550394115306354}
   - component: {fileID: 559427667474204163}
   - component: {fileID: 4018442376162923332}
+  - component: {fileID: 537702131449306796}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 4
   m_TagString: Untagged
@@ -8055,6 +8140,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &537702131449306796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314233044479897122}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: 0, y: 0.19999999, z: 0.000000059604645}
 --- !u!1 &8357858690035437349
 GameObject:
   m_ObjectHideFlags: 0
@@ -8230,6 +8328,7 @@ GameObject:
   - component: {fileID: 3601480464062413119}
   - component: {fileID: 1984796990489539779}
   - component: {fileID: 5639883421871776169}
+  - component: {fileID: 8148540874929426714}
   m_Layer: 0
   m_Name: detail_roadBlockSmall 5
   m_TagString: Untagged
@@ -8301,6 +8400,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8148540874929426714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817751230801277957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3, y: 2.5, z: 0.40000007}
+  m_Center: {x: -0.000000029802322, y: 0.19999999, z: 0.000000059604645}
 --- !u!1 &9013294108001687470
 GameObject:
   m_ObjectHideFlags: 0

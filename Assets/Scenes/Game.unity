@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press P to Start/Pause  Game \n\n"
+  m_text: "Press Any Key To Start \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -4000,9 +4000,11 @@ MonoBehaviour:
   escMenu: {fileID: 1654257958}
   controller: {fileID: 2094390370}
   moveVector: {x: 0, y: 0, z: 0}
-  speed: 0
-  hSpeed: 20
+  speed: 30
+  hSpeed: 10
   slower: 15
+  maxspeed: 150
+  maxhSpeed: 30
 --- !u!54 &2094390373
 Rigidbody:
   m_ObjectHideFlags: 0

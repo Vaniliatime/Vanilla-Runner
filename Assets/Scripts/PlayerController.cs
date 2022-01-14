@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -23,9 +24,11 @@ public class PlayerController : MonoBehaviour
     public static bool GameIsPaused = true;
     public CharacterController controller;
     public Vector3 moveVector;
-    public float speed = 40f;
-    public float hSpeed = 25f;
+    public float speed;
+    public float hSpeed;
     public float slower = 15f;
+    public float maxspeed;
+    public float maxhSpeed;
 
 
 
@@ -38,20 +41,26 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     void Start()
     {
+        Application.targetFrameRate = 144;
         audioSource = gameObject.GetComponent<AudioSource>();
         anim = gameObject.GetComponent<Animator>();
 
 
         controller = GetComponent<CharacterController>();
 
-   
+        
+
+
+
+
+
+
 
         // Lock cursor
-  
+
         Cursor.visible = false;
 
         Pause();
-
 
 
      
@@ -68,20 +77,27 @@ public class PlayerController : MonoBehaviour
 
         moveVector.z = speed;
 
+        if(speed < maxspeed)
+        speed += 0.3f * Time.deltaTime;
+        
 
+        if (hSpeed < maxhSpeed)
+            hSpeed += 0.1f * Time.deltaTime;
 
         controller.Move(moveVector * Time.deltaTime);
 
 
 
-     
+        anim.SetFloat("RUN", speed);
 
 
 
 
 
 
-
+        /* 
+         * Shift SlowDown
+         
         if (Input.GetKey(KeyCode.LeftShift))
         {
             slowSpeed();
@@ -92,22 +108,18 @@ public class PlayerController : MonoBehaviour
         {
             sprint();
         }
+      
+    */
 
 
 
 
-
-
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.anyKeyDown)
         {
             if (GameIsPaused)
             {
                 Resume();
 
-            }
-            else
-            {
-                Pause();
             }
            
 
@@ -147,17 +159,12 @@ public class PlayerController : MonoBehaviour
 
     void PauseMenu()
     {
-        escMenu.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        SceneManager.LoadScene("Menu");
+
+
     }
 
-    void ResumeMenu()
-    {
-        escMenu.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-    }
+     
 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -185,4 +192,6 @@ public class PlayerController : MonoBehaviour
     }
 
    
+
+
 }
