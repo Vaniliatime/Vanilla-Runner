@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-
     public GameObject[] tilePrefabs;
     public float zSpawn = 0;
     public float tileLength = 8;
     public int numberOfTiles = 5;
-
-    private List<GameObject> activeTiles = new List<GameObject>();
-
     public Transform playerTransform;
+    private List<GameObject> activeTiles = new List<GameObject>();
+  
 
-    // Start is called before the first frame update
     void Start()
     {
        for(int i=0; i<numberOfTiles; i++)
@@ -26,7 +23,7 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         if(playerTransform.position.z -60 >  zSpawn - (numberOfTiles * tileLength))

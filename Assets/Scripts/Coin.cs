@@ -13,30 +13,15 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
-
         if (other.gameObject.name != "Player")
         {
             return;
         }
 
-
         gameManager.inst.IncrementScore();
 
-
-
-
         Instantiate(coinParticles, transform.position, Quaternion.identity);
-
         Destroy(gameObject);
-    }
-
-
-   
-
-    void Start()
-    {
-        
     }
 
 

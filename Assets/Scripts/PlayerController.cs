@@ -8,25 +8,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-  
+    public float slower = 15f;
     public AudioSource audioSource;
     public Animator animator;
-
- 
-
-    [HideInInspector]
     public bool canMove = true;
-
     public GameObject waitScreen;
-        public GameObject escMenu;
-
-
+    public GameObject escMenu;
     public static bool GameIsPaused = true;
+
     public CharacterController controller;
     public Vector3 moveVector;
     public float speed;
     public float hSpeed;
-    public float slower = 15f;
     public float maxspeed;
     public float maxhSpeed;
 
@@ -37,24 +30,13 @@ public class PlayerController : MonoBehaviour
 
 
 
-
     Animator anim;
     void Start()
     {
         Application.targetFrameRate = 144;
         audioSource = gameObject.GetComponent<AudioSource>();
         anim = gameObject.GetComponent<Animator>();
-
-
         controller = GetComponent<CharacterController>();
-
-        
-
-
-
-
-
-
 
         // Lock cursor
 
@@ -62,8 +44,6 @@ public class PlayerController : MonoBehaviour
 
         Pause();
 
-
-     
 
     }
 
@@ -171,9 +151,13 @@ public class PlayerController : MonoBehaviour
     {
         if(hit.transform.tag =="Obstacle")
         {
+            
             PlayerManager.gameOver = true;
+            
+         
         }
     }
+  
 
 
     void sprint ()

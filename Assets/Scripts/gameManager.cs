@@ -1,4 +1,4 @@
-﻿
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +31,7 @@ public class gameManager : MonoBehaviour
         highscore = PlayerPrefs.GetFloat("Highscore");
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
@@ -42,6 +42,6 @@ public class gameManager : MonoBehaviour
             PlayerPrefs.SetFloat("Highscore", score);
         }
     }
-
+  
 
 }

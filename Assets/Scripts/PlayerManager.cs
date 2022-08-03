@@ -22,7 +22,12 @@ public class PlayerManager : MonoBehaviour
         
     }
 
+
+    
+    
+
     // Update is called once per frame
+    
     void Update()
     {
         if (gameOver)
@@ -36,9 +41,12 @@ public class PlayerManager : MonoBehaviour
             playercontrollscript.speed = 0f;
             playercontrollscript.hSpeed = 0f;
 
+            Achivements.Ach06Count += 1;
+        
         }
-       
-
 
     }
+
+  
 }
+
