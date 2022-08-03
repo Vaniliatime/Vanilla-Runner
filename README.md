@@ -1,7 +1,7 @@
 # Tokyo-Runner-Rev-2.0
 
 <b> <center>  Main Menu </b> </center> </br>
-[](SS/Vanilia Runner Menuu.png)
+![](SS/Menu.png)
 <b> <center>  Controls </b> </center> </br>
 [](SS/Vanilia Runner  Controls.png)
 <b> <center>  Achievements </b> </center> </br>
