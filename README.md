@@ -1,14 +1,26 @@
-# Tokyo-Runner-Rev-2.0
 
-<b> <center>  Main Menu </b> </center> </br>
+# Vanillia Runner
+Projekt gry gatunku Endless Runner realizowany na studiach.
+
+## Mechaniki 
+- Automatyczny bieg postaci. Gracz steruje ruchami na lewo i prawo.
+- System punktów oparty na zbieraniu krszytałow znajdujacych sie na mapie.
+- System osiągnięć podzielony na 3 kategorię: Ilość zebranych krzsytałow, czas spędzony w grze i ilość poniesionych śmierci.
+- Generowanie kafelków mapy z przeszkodami oraz kryształami przed graczem w sposób losowy. 
+- Zwiekszająca sie predkość biegu wraz z czasem gry.
+- Mgła wojny ograniczająca widoczność gracza do 2 kafelek. </br>
+
+### Prezentacja zrzutów ekranu z gry.
+
+### <b>Menu</b></br>
 ![](SS/Menu.png)
-<b> <center>  Controls </b> </center> </br>
+### <b>Controls </b></br>
 ![](SS/Controls.png)
-<b> <center>  Achievements </b> </center> </br>
+### <b>Achievements</b></br>
 ![](SS/Achievements.png)
-<b> <center>  Game </b> </center> </br>
+### <b>Game </b></br>
 ![](SS/Play.png)
-<b> <center>  GameOver </b> </center> </br>
+### <b>GameOver</b></br>
 ![](SS/GameOver.png)
 
 
