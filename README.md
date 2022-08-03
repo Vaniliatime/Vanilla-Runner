@@ -9,6 +9,10 @@ Projekt gry gatunku Endless Runner realizowany na studiach.
 - Generowanie kafelków mapy z przeszkodami oraz kryształami przed graczem w sposób losowy. 
 - Zwiekszająca sie predkość biegu wraz z czasem gry.
 - Mgła wojny ograniczająca widoczność gracza do 2 kafelek. </br>
+### Gra stworzona przy użyciu.
+- C# 
+- Unity Engine
+- Asset Forge
 
 ### Prezentacja zrzutów ekranu z gry.
 
