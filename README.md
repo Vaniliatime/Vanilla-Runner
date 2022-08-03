@@ -1,15 +1,15 @@
 # Tokyo-Runner-Rev-2.0
 
 <b> <center>  Main Menu </b> </center> </br>
-[](SS/Vanilia Runner Menuu.png)
+![](SS/Menu.png)
 <b> <center>  Controls </b> </center> </br>
-[](SS/Vanilia Runner  Controls.png)
+![](SS/Controls.png)
 <b> <center>  Achievements </b> </center> </br>
-[](SS/Vanilia Runner Achievements .png)
+![](SS/Achievements.png)
 <b> <center>  Game </b> </center> </br>
-[](SS/Vanilia Runner Play.png)
+![](SS/Play.png)
 <b> <center>  GameOver </b> </center> </br>
-[](SS/Vanilia Runner Game Over.png)
+![](SS/GameOver.png)
 
 
 
