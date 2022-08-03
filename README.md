@@ -13,7 +13,8 @@ Projekt gry gatunku Endless Runner realizowany na studiach.
 - C# 
 - Unity Engine
 - Asset Forge
-
+### Link do buildu.
+https://vaniliatime.itch.io/vanilliarunner
 ### Prezentacja zrzutów ekranu z gry.
 
 ### <b>Menu</b></br>
