@@ -6,7 +6,7 @@ Projekt gry gatunku Endless Runner realizowany na studiach.
 - Automatyczny bieg postaci. Gracz steruje ruchami na lewo i prawo.
 - System punktów oparty na zbieraniu krszytałow znajdujacych sie na mapie.
 - System osiągnięć podzielony na 3 kategorię: Ilość zebranych krzsytałow, czas spędzony w grze i ilość poniesionych śmierci.
-- Generowanie kafelków mapy z przeszkodami oraz kryształami przed graczem w sposób losowy. 
+- Losowe generowanie kafelek mapy przed graczem.
 - Zwiekszająca sie predkość biegu wraz z czasem gry.
 - Mgła wojny ograniczająca widoczność gracza do 2 kafelek. </br>
 ### Gra stworzona przy użyciu.
