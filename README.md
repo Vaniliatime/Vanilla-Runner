@@ -1,21 +1,21 @@
 
 # Vanillia Runner
-Projekt gry gatunku Endless Runner realizowany na studiach.
+An Endless Runner game project developed during studies.
 
-## Mechaniki 
-- Automatyczny bieg postaci. Gracz steruje ruchami na lewo i prawo.
-- System punktów oparty na zbieraniu krszytałow znajdujacych sie na mapie.
-- System osiągnięć podzielony na 3 kategorię: Ilość zebranych krzsytałow, czas spędzony w grze i ilość poniesionych śmierci.
-- Losowe generowanie kafelek mapy przed graczem.
-- Zwiekszająca sie predkość biegu wraz z czasem gry.
-- Mgła wojny ograniczająca widoczność gracza do 2 kafelek. </br>
-### Gra stworzona przy użyciu.
+## Mechanics 
+- Automatic character running. The player controls left and right movements.
+- A point system based on collecting crystals scattered throughout the map.
+- Achievement system divided into 3 categories: Number of collected crystals, time spent in the game, and the number of deaths.
+- Random generation of map tiles in front of the player.
+- Increasing running speed as the game progresses.
+- War fog limiting the player's visibility to 2 tiles. </br>
+### Game created using:.
 - C# 
 - Unity Engine
 - Asset Forge
-### Link do buildu.
+### Link to the game build.
 https://vaniliatime.itch.io/vanilliarunner
-### Prezentacja zrzutów ekranu z gry.
+### Presentation of screenshots from the game.
 
 ### <b>Menu</b></br>
 ![](SS/Menu.png)
